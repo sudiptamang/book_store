@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../../components/NavBar/NavBar";
-import AboutBooks from "../../components/aboutBooks/aboutBooks";
+import AboutBooks from "../../components/AboutBooks/AboutBooks";
 import photo from "../../Assets/library.jpg";
 
 function Book() {

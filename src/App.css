@@ -1,20 +1,6 @@
 .App {
   text-align: center;
 }
-
-.search {
-  border-radius: 5px;
-  background-color: gainsboro;
-  border: none;
-  margin-left: 300px;
-  padding: 5px;
-  padding-right: 200px;
-  margin-top: 50px;
-}
-.container {
-  margin-left: 50px;
-  margin-right: 50px;
-}
 .image {
   height: 220px;
   width: 200px;
@@ -30,7 +16,4 @@
 .Booklist {
   display: flex;
   justify-content: space-between;
-}
-.break {
-  display: flex;
 }

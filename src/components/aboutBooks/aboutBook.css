@@ -7,11 +7,7 @@
   padding-right: 200px;
   margin-top: 50px;
 }
-.container {
-  margin-left: 50px;
-  margin-right: 50px;
-  background-color: red;
-}
+
 .image {
   height: 220px;
   width: 200px;
@@ -27,7 +23,7 @@
 .Booklist {
   display: flex;
   justify-content: space-between;
-  margin-left: 40px;
+
 }
 .break {
   display: flex;

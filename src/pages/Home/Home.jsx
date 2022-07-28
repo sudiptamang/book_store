@@ -1,44 +1,47 @@
 import React from "react";
 import Navbar from "../../components/NavBar/NavBar";
-import picture from "../../Assets/cart.png";
-import AboutBooks from "../../components/aboutBooks/aboutBooks";
-import photo from "../../Assets/library.jpg";
+import AboutBooks from "../../components/AboutBooks/AboutBooks";
+import BookImg from "../../Assets/library.jpg";
+import "./Home.css"
 
 const Home = () => {
   return (
     <div>
       <Navbar />
       <hr />
-      <input className="search" placeholder="Search here....."></input>
-      <img src={picture} className="cart" />
+      <div className="searchInputCard">
+          <input className="searchInput" placeholder="Search here....."/>
+      </div>
 
-      <div className="container">
-        <div className="break">
-          <h2 className="title">Top Sales</h2>
-          {/* <hr></hr> */}
+      <div className="homeContainer">
+        <div className="topSales">
+          <h2>Top Sales</h2>
+           <hr className="hr"/>
         </div>
 
         <div className="Booklist">
+          <div>
+             <AboutBooks
+              photo={BookImg}
+               bookName="Rich dad poor dad"
+               price="350"
+               Discount="400"
+            />
+            </div>
           <AboutBooks
-            photo={photo}
-            bookName="Rich dad poor dad"
-            price="350"
-            Discount="400"
-          />
-          <AboutBooks
-            photo={photo}
+            photo={BookImg}
             bookName="Muna madan"
             price="550"
             Discount="800"
           />
           <AboutBooks
-            photo={photo}
+            photo={BookImg}
             bookName="Muna madan"
             price="550"
             Discount="800"
           />
           <AboutBooks
-            photo={photo}
+            photo={BookImg}
             bookName="Muna madan"
             price="550"
             Discount="800"
