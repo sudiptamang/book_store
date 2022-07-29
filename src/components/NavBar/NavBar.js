@@ -5,41 +5,52 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="navBarContainer">
-      <nav className="Header">
-        <div className="logoAndName">
-          <img src={MyImage} height="60px" width="60px" alt="" />
-          <h3 className="appName">BookStore</h3>
-        </div>
-        <div
-          style={{
-            display: "flex",
-          }}
-        >
-          <ul
+    <div>
+      <div className="navBarContainer">
+        <nav className="Header">
+          <div className="logoAndName">
+            <img src={MyImage} height="60px" width="60px" alt="" />
+            <h3 className="appName">BookStore</h3>
+          </div>
+          <div
             style={{
-              listStyle: "none",
               display: "flex",
             }}
           >
-            <Link to="/">
-              <li className="navBarList">Home </li>
-            </Link>
-            <Link to="/contactpage">
-              <li className="navBarList">Contract </li>
-            </Link>
+            <ul
+              style={{
+                listStyle: "none",
+                display: "flex",
+              }}
+            >
+              <Link to="/">
+                <li className="navBarList">Home </li>
+              </Link>
+              <Link to="/contactpage">
+                <li className="navBarList">Contact </li>
+              </Link>
 
-            <li className="navBarList">Sells</li>
-            <li className="navBarList">Buys </li>
-          </ul>
-          <div>
-            <ul style={{ listStyle: "none", display: "flex" }}>
-              <li className="navBarList">Log in</li>
-              <li className="navBarList">SignUp</li>
+              <Link to="/sellspage">
+                <li className="navBarList">Sells</li>
+              </Link>
+              <Link to="/BuyPage">
+                <li className="navBarList">Buy </li>
+              </Link>
             </ul>
+            <div>
+              <ul style={{ listStyle: "none", display: "flex" }}>
+                <Link to="/LogPage">
+                  <li className="navBarList">Log in</li>
+                </Link>
+                <Link to="/SignPage">
+                  <li className="navBarList">SignUp</li>
+                </Link>
+              </ul>
+            </div>
           </div>
-        </div>
-      </nav>
+        </nav>
+      </div>
+      <hr />
     </div>
   );
 };

@@ -1,0 +1,87 @@
+.unity {
+  display: flex;
+}
+.buy {
+  background-color: greenyellow;
+  color: #fff;
+  border: none;
+  width: 150px;
+  border-radius: 5px;
+  padding: 10px;
+}
+.Card {
+  background-color: red;
+  color: aliceblue;
+  border: none;
+  width: 150px;
+  padding: 10px;
+  margin-left: 20px;
+  border-radius: 5px;
+}
+.BookDetails {
+  display: flex;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.description {
+  margin-left: 100px;
+}
+.Quantity {
+  margin-top: 20px;
+  margin-left: 15px;
+  padding-right: 10px;
+}
+.Minussymbol {
+  margin-left: 10px;
+  height: 20px;
+  width: 20px;
+  border: none;
+}
+.Plussymbol {
+  margin-left: 10px;
+  border: none;
+  height: 20px;
+  width: 20px;
+}
+span {
+  margin-left: 10px;
+}
+.sells {
+  display: flex;
+  /* background-color: red; */
+}
+.Buy {
+  background-color: greenyellow;
+  padding: 10px;
+  color: white;
+  width: 150px;
+  border-radius: 5px;
+  border: none;
+}
+.cart {
+  background-color: red;
+  padding: 10px;
+  color: white;
+  width: 150px;
+  border-radius: 5px;
+  border: none;
+  margin-left: 20px;
+}
+/* .minus {
+} */
+.rate {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.add {
+  margin-left: 7px;
+}
+.BookTitle {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1100px;
+}
+.Rich {
+  margin-left: 20px;
+}

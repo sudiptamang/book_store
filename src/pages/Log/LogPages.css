@@ -1,0 +1,26 @@
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1100px;
+}
+.LogPages {
+  /* height: 40px; */
+  background-color: greenyellow;
+  width: 300px;
+}
+.backing {
+  /* padding-top: 10px; */
+  color: aliceblue;
+}
+.border {
+  background-color: antiquewhite;
+  height: 350px;
+  width: 300px;
+}
+.parent {
+  display: flex;
+}
+.LogIn {
+  padding-top: 30px;
+  padding-left: 10px;
+}
