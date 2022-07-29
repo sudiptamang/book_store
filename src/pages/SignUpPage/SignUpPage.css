@@ -1,0 +1,134 @@
+.containers{
+    display: flex;
+    
+}
+.container{
+    width: 50%;
+    background-image: cover;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.SignUpPageImg{
+    width: 50%;
+    height: 100vh; 
+}
+.navBar{
+    display: flex;
+    justify-content: end;
+    background-color: rgb(9, 232, 9);
+    background-size: cover;
+    width: 100%;
+    height: 50px;
+}
+.backArrow{
+    padding-top: 8px;
+    width: 40px;    
+    height: 35px; 
+    color: white;   
+}
+
+.returnHome{
+    padding: 10px 30px 0 0;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+.inputItems{
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px ;
+    padding-left: 80px;
+    
+
+}
+
+.input{
+    margin: 10px;
+    
+}
+.inputBox{
+    width: 330px;
+    height: 23px;
+    margin-top: 3px;
+    margin-left: 13px;
+    font-size: 15px;
+   border-style: none;
+   border-bottom: 2px solid rgba(114, 107, 107, 0.454);
+   outline:none;
+}
+
+
+
+.radioBtn{
+   
+   padding-left: 20px;
+   display: flex;
+   justify-content: space-between;
+   width: 300px;
+}
+
+.SignUpDefined{
+    margin-top: 10px;
+    margin-left: 16px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+a{
+   border-style: none;
+   text-decoration: none;
+   color: rgb(0, 119, 255);
+}
+
+.personInfos{
+    margin-bottom: 0px;
+
+}
+.personInfo{
+    width: 80px;
+   height: 30px;
+   background-color: orange;
+   border-radius: 4px;
+   border-style: none;
+   color: white;
+   font-weight: bold;
+}
+.personInfo:hover{
+    cursor: pointer;
+}
+
+
+.SignUpWith{
+    width: 130px;
+   height: 30px;
+   border-radius: 4px;
+   border-style: none;
+   color: white;
+   font-weight: bold;
+   margin-top: 0;
+}
+.SignUpWithFb{
+    background-color: rgb(13, 21, 248);
+}
+.SignUpWithFb:hover{
+    cursor: pointer;
+}
+.Icon{
+width: 18px;
+height: 18px;
+margin-right: 13px;
+}
+.icon{
+    position: relative;
+    top: -4px;
+    font-size: 12px;
+}
+
+.SignUpWithGgl{
+    margin-left: 5px;
+    background-color: red;
+}
+.SignUpWithGgl:hover{
+    cursor: pointer;
+}

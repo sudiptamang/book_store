@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+<<<<<<< Updated upstream
 import { Routes, Route } from "react-router-dom";
 import BookDetail from "./pages/BookDetail/BookDetail";
 import Home from "./pages/Home/Home";
@@ -21,6 +22,18 @@ function App() {
         <Route path="/logpage" element={<LogPage />} />
         <Route path="/Signpage" element={<SignPage />} />
       </Routes>
+=======
+import SignUpPage from "./pages/SignUpPage/SignUpPage";
+// import NewPassword from "./pages/CreateNewPassword/CreateNewPassword";
+function App() {
+  return (
+    <div>
+     
+      {/* <BookDetail /> */}
+      {/* <Home /> */}
+      <SignUpPage/>
+      {/* {<NewPassword/>} */}
+>>>>>>> Stashed changes
     </div>
   );
 }
