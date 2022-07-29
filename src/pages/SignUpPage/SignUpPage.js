@@ -23,7 +23,12 @@ const SignUpPage = () => {
           <div class="inputItems">
             <div class="input">
               <BsPersonFill />
-              <input type="text" placeholder="Full Name" class="inputBox" required/>
+              <input
+                type="text"
+                placeholder="Full Name"
+                class="inputBox"
+                required
+              />
             </div>
             <div class="input">
               <AiFillMobile />
@@ -36,7 +41,12 @@ const SignUpPage = () => {
             </div>
             <div class="input">
               <MdEmail />
-              <input type="email" placeholder="Email" class="inputBox" required/>
+              <input
+                type="email"
+                placeholder="Email"
+                class="inputBox"
+                required
+              />
             </div>
             <div class="input">
               <FaRegCalendarAlt />
@@ -63,7 +73,6 @@ const SignUpPage = () => {
                 placeholder="New Password"
                 required
                 class="inputBox"
-                
               />
             </div>
             <div class="input">

@@ -42,7 +42,7 @@ const Navbar = () => {
                 <Link to="/LogPage">
                   <li className="navBarList">Log in</li>
                 </Link>
-                <Link to="/SignPage">
+                <Link to="/Signupage">
                   <li className="navBarList">SignUp</li>
                 </Link>
               </ul>
