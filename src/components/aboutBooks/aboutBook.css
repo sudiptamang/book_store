@@ -9,16 +9,12 @@
 }
 
 .image {
-  height: 220px;
-  width: 200px;
+  height: 200px;
+  width: 150px;
   margin-top: 30px;
 }
 .price {
-  margin: 0px;
   color: #ec8989;
-}
-.BookName {
-  margin: 0px;
 }
 .Booklist {
   display: flex;

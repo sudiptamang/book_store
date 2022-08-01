@@ -13,46 +13,46 @@ import { AiOutlineGooglePlus } from "react-icons/ai";
 const SignUpPage = () => {
   return (
     <div>
-      <div class="containers">
-        <img src={SignUpImg} alt="" class="SignUpPageImg" />
-        <div class="container">
-          <div class="navBar">
-            <HiArrowNarrowLeft class="backArrow" />
-            <span class="returnHome">Back</span>
+      <div className="containers">
+        <img src={SignUpImg} alt="" className="SignUpPageImg" />
+        <div className="container">
+          <div className="navBar">
+            <HiArrowNarrowLeft className="backArrow" />
+            <span className="returnHome">Back</span>
           </div>
-          <div class="inputItems">
-            <div class="input">
+          <div className="inputItems">
+            <div className="input">
               <BsPersonFill />
               <input
                 type="text"
                 placeholder="Full Name"
-                class="inputBox"
+                className="inputBox"
                 required
               />
             </div>
-            <div class="input">
+            <div className="input">
               <AiFillMobile />
               <input
                 type="number"
                 placeholder="Mobile Number"
-                class="inputBox"
+                className="inputBox"
                 required
               />
             </div>
-            <div class="input">
+            <div className="input">
               <MdEmail />
               <input
                 type="email"
                 placeholder="Email"
-                class="inputBox"
+                className="inputBox"
                 required
               />
             </div>
-            <div class="input">
+            <div className="input">
               <FaRegCalendarAlt />
-              <input type="date" class="inputBox" />
+              <input type="date" className="inputBox" />
             </div>
-            <div class="input radioBtn">
+            <div className="input radioBtn">
               <div>
                 <input type="radio" id="male" name="sex" value="male" />
                 <label for="male">Male</label>
@@ -66,42 +66,42 @@ const SignUpPage = () => {
                 <label for="other">Other</label>
               </div>
             </div>
-            <div class="input">
+            <div className="input">
               <FaLock />
               <input
                 type="password"
                 placeholder="New Password"
                 required
-                class="inputBox"
+                className="inputBox"
               />
             </div>
-            <div class="input">
+            <div className="input">
               <FaLock />
               <input
                 type="password"
                 placeholder="Confirm Password"
                 required
-                class="inputBox"
+                className="inputBox"
               />
             </div>
-            <p class="SignUpDefined">
+            <p className="SignUpDefined">
               By sigining up you agree to <a href="#">terms & condations</a>{" "}
             </p>
-            <div class="input personInfos">
-              <button class="personInfo">Join</button>
+            <div className="input personInfos">
+              <button className="personInfo">Join</button>
             </div>
-            <div class="input SignUpWiths">
-              <button class="SignUpWith SignUpWithFb">
-                <TbBrandFacebook class="Icon" />
-                <span class="icon">Facebook</span>
+            <div className="input SignUpWiths">
+              <button className="SignUpWith SignUpWithFb">
+                <TbBrandFacebook className="Icon" />
+                <span className="icon">Facebook</span>
               </button>
 
-              <button class="SignUpWith SignUpWithGgl">
-                <AiOutlineGooglePlus class="Icon" />
-                <span class="icon">Google</span>
+              <button className="SignUpWith SignUpWithGgl">
+                <AiOutlineGooglePlus className="Icon" />
+                <span className="icon">Google</span>
               </button>
             </div>
-            <p class="siginUp">
+            <p className="siginUp">
               Already Members? <a href="#">Login Here</a>
             </p>
           </div>
