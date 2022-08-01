@@ -1,34 +1,39 @@
 .containers{
     display: flex;
-    
+    width: 1300px;
+    margin-right: auto;
+    margin-left: auto;
 }
 .container{
     width: 50%;
-    background-image: cover;
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-right: 20px; 
+    
 }
 .SignUpPageImg{
-    width: 50%;
-    height: 100vh; 
+    width: 38%;
+    height: 80vh; 
+    position: relative;
+    top: 60px;
+    left: 130px;
 }
 .navBar{
     display: flex;
-    justify-content: end;
+    justify-content: start;
     background-color: rgb(9, 232, 9);
     background-size: cover;
     width: 100%;
-    height: 50px;
+    height: 60px;
 }
 .backArrow{
-    padding-top: 8px;
+    padding-top: 12px;
+    margin-left: 20px;
     width: 40px;    
     height: 35px; 
     color: white;   
 }
 
 .returnHome{
-    padding: 10px 30px 0 0;
+    padding: 15px 0 0 0;
     font-size: 20px;
     color: white;
     font-weight: bold;
@@ -39,10 +44,24 @@
     flex-direction: column;
     padding-top: 50px ;
     padding-left: 80px;
-    
+}
+.inputItems1{
+    padding-left: 80px;
 
 }
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
 
+.dateIcon::-webkit-inner-spin-button,
+.dateIcon::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
 .input{
     margin: 10px;
     
@@ -131,4 +150,7 @@ margin-right: 13px;
 }
 .SignUpWithGgl:hover{
     cursor: pointer;
+}
+.siginUp{
+    padding-left: 14px;
 }

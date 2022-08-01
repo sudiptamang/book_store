@@ -13,14 +13,14 @@ import { AiOutlineGooglePlus } from "react-icons/ai";
 const SignUpPage = () => {
   return (
     <div>
-      <div className="containers">
-        <img src={SignUpImg} alt="" className="SignUpPageImg" />
-        <div className="container">
           <div className="navBar">
             <HiArrowNarrowLeft className="backArrow" />
             <span className="returnHome">Back</span>
           </div>
-          <div className="inputItems">
+      <div className="containers"> 
+        <img src={SignUpImg} alt="" className="SignUpPageImg" />
+        <div className="container">
+          <form action="_blank" className="inputItems">
             <div className="input">
               <BsPersonFill />
               <input
@@ -50,7 +50,7 @@ const SignUpPage = () => {
             </div>
             <div className="input">
               <FaRegCalendarAlt />
-              <input type="date" className="inputBox" />
+              <input type="date" className="inputBox dateIcon" />
             </div>
             <div className="input radioBtn">
               <div>
@@ -90,6 +90,9 @@ const SignUpPage = () => {
             <div className="input personInfos">
               <button className="personInfo">Join</button>
             </div>
+          </form>
+          <div class="inputItems1 ">
+
             <div className="input SignUpWiths">
               <button className="SignUpWith SignUpWithFb">
                 <TbBrandFacebook className="Icon" />
