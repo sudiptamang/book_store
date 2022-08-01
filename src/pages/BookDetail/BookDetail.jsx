@@ -1,9 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../../components/NavBar/NavBar";
-// import AboutBooks from "../../components/AboutBooks/AboutBooks";
 import photo from "../../Assets/library.jpg";
 import "./BookDetail.css";
+import { useParams } from "react-router-dom";
+
 function Book() {
+  const [bookDetails, setBookDetails] = useState([]);
+  const params = useParams();
+
+  useEffect(() => {
+    fetch(`http://localhost:3030/book/${params.bookId}`)
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        setBookDetails(data);
+      });
+  }, [params]);
+
   return (
     <div>
       <Navbar />
@@ -13,7 +26,7 @@ function Book() {
         </div>
         <div className="Rich">
           <p>
-            <b>Rich Dad Poor Dad - Robert Kiyosakib</b>
+            <b>{bookDetails.title}</b>
           </p>
           <p>Description</p>
           <p>Mass Market Paperback: 336 pages</p>
@@ -21,7 +34,7 @@ function Book() {
             Publisher: Plata Publishing ; Anniversary,Updated edition(April
             11,2017)
           </p>
-          <p>Rs.397</p>
+          <p>{bookDetails.price}</p>
           <p>Rs.800-50%</p>
           <div className="sells">
             <div>

@@ -30,7 +30,7 @@ const Home = () => {
 
         <div className="Booklist">
           {books.map((book) => (
-            <Link to="/bookdetails">
+            <Link to={`/bookdetails/${book.id}`}>
               <AboutBooks
                 photo={book?.imageUrl}
                 bookName={book?.title}
