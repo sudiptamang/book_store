@@ -32,7 +32,7 @@ const Home = () => {
           {books.map((book) => (
             <Link to={`/bookdetails/${book.id}`}>
               <AboutBooks
-                photo={book?.imageUrl}
+                image={book?.imageUrl}
                 bookName={book?.title}
                 price={book?.description?.price}
                 Discount={book.description?.discount + book.description?.price}
