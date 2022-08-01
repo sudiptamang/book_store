@@ -10,7 +10,7 @@ const Navbar = () => {
         <nav className="Header">
           <div className="logoAndName">
             <img src={MyImage} height="60px" width="60px" alt="" />
-            <h3 className="appName">BookStore</h3>
+            <h3 className="appName">BOOK STORE</h3>
           </div>
           <div
             style={{
