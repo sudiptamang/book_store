@@ -1,35 +1,41 @@
 .searchInput {
-    border-radius: 5px;
-    background-color: gainsboro;
-    outline: none;
-    border: none;
-    padding: 10px 300px 10px 8px;
-    margin-top: 50px;
-  }
-  
-  .topSales {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .hr{
-    width: 85%;
-    height: 1px;
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    /* align-items: center; */
-  }
-.searchInputCard{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin:30px 0px;
+  border-radius: 5px;
+  background-color: gainsboro;
+  outline: none;
+  border: none;
+  padding: 10px 300px 10px 8px;
+  margin-top: 50px;
 }
-.homeContainer{
+
+/* .topSales {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+.hr {
+  width: 85%;
+  height: 1px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+.searchInputCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0px;
+}
+.homeContainer {
+  display: flex;
+  flex-wrap: wrap;
   margin-left: auto;
   margin-right: auto;
   width: 1100px;
 }
-  
-  
+.Booklist {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: red;
+}

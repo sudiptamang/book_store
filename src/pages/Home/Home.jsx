@@ -1,11 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../../components/NavBar/NavBar";
 import AboutBooks from "../../components/AboutBooks/AboutBooks";
-import BookImg from "../../Assets/library.jpg";
+
 import "./Home.css";
 import { Link } from "react-router-dom";
 
 const Home = () => {
+  const [books, setBooks] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:3030/book/list")
+      .then((res) => res.json())
+      .then((data) => {
+        setBooks(data);
+      });
+  }, []);
   return (
     <div>
       <Navbar />
@@ -20,40 +29,16 @@ const Home = () => {
         </div>
 
         <div className="Booklist">
-          <Link to="/bookdetails">
-            <div>
+          {books.map((book) => (
+            <Link to="/bookdetails">
               <AboutBooks
-                photo={BookImg}
-                bookName="Rich dad poor dad"
-                price="350"
-                Discount="400"
+                photo={book?.imageUrl}
+                bookName={book?.title}
+                price={book?.description?.price}
+                Discount={book.description?.discount + book.description?.price}
               />
-            </div>
-          </Link>
-          <Link to={"/bookdetails"}>
-            <AboutBooks
-              photo={BookImg}
-              bookName="Muna madan"
-              price="550"
-              Discount="800"
-            />
-          </Link>
-          <Link to={"/bookdetails"}>
-            <AboutBooks
-              photo={BookImg}
-              bookName="Muna madan"
-              price="550"
-              Discount="800"
-            />
-          </Link>
-          <Link to={"/bookdetails"}>
-            <AboutBooks
-              photo={BookImg}
-              bookName="Muna madan"
-              price="550"
-              Discount="800"
-            />
-          </Link>
+            </Link>
+          ))}
         </div>
       </div>
     </div>

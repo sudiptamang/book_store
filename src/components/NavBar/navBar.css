@@ -13,10 +13,8 @@
 .Header {
   display: flex;
   justify-content: space-between;
- 
 }
-.navBarList{
+.navBarList {
   margin-left: 40px;
+  text-decoration: none;
 }
-
-

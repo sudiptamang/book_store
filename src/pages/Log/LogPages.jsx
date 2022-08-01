@@ -18,6 +18,9 @@ const LogPage = () => {
             <p className="backing"> Back to home</p>
             <div className="border">
               <h4 className="LogIn">Login to Book Store</h4>
+              <p className="account">or Create Account</p>
+              <input className="Gmail" placeholder="Mobile or Email" />
+              <input className="pass" placeholder="Password" />
             </div>
           </div>
         </div>

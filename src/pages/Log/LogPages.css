@@ -22,5 +22,14 @@
 }
 .LogIn {
   padding-top: 30px;
-  padding-left: 10px;
+  padding-left: 20px;
+}
+.account {
+  padding-left: 20px;
+}
+.Gmail {
+  margin-left: 20px;
+}
+.pass {
+  margin-left: 20px;
 }
