@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../../components/NavBar/NavBar";
 import AboutBooks from "../../components/AboutBooks/AboutBooks";
+import { BsCart } from "react-icons/bs";
 
 import "./Home.css";
 import { Link } from "react-router-dom";
@@ -20,6 +21,7 @@ const Home = () => {
       <Navbar />
       <div className="searchInputCard">
         <input className="searchInput" placeholder="Search here....." />
+        <BsCart className="cartIcon" />
       </div>
 
       <div className="homeContainer">

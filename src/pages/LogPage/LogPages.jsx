@@ -1,27 +1,42 @@
 import React from "react";
 import MyImage from "../../Assets/library.jpg";
-import Navbar from "../../components/NavBar/NavBar";
+import { HiArrowNarrowLeft } from "react-icons/hi";
+import { AiOutlineMail } from "react-icons/ai";
+import { RiLockPasswordLine } from "react-icons/ri";
 import "./LogPages.css";
 
 const LogPage = () => {
   return (
     <div>
-      <Navbar />
-      <div className="container">
-        <div className="parent">
-          <div>
-            {" "}
-            <img src={MyImage} height="400px" width="300px" alt="" />
+      <div className="header">
+        <div className="backSection">
+          <HiArrowNarrowLeft className="backArrow" />
+          <span className="returnHome">Back</span>
+        </div>
+      </div>
+      <div className="parent">
+        <div>
+          <img src={MyImage} height="500px" width="400px" alt="" />
+        </div>
+
+        <div className="LogPages">
+          <div className="LoginPage">
+            <h4 className="LogIn">Login to Book Store</h4>
+            <p className="account">or create account</p>
           </div>
 
-          <div className="LogPages">
-            <p className="backing"> Back to home</p>
-            <div className="border">
-              <h4 className="LogIn">Login to Book Store</h4>
-              <p className="account">or Create Account</p>
-              <input className="Gmail" placeholder="Mobile or Email" />
-              <input className="pass" placeholder="Password" />
-            </div>
+          <div className="LoginInput">
+            <AiOutlineMail className="GmailIcon" />
+            <input className="gmailInput" placeholder="Mobile or Email" />
+          </div>
+          <div>
+            <RiLockPasswordLine className="PasswordIcon" />
+            <input className="passInput" placeholder="Password" />
+          </div>
+
+          <div className="forgot">
+            <button className="Loginbutton">Login</button>
+            <p className="FOOTER">FORGOT LOGIN PASSWORD?</p>
           </div>
         </div>
       </div>

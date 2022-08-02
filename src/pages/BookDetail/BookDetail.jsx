@@ -22,7 +22,7 @@ function Book() {
       <Navbar />
       <div className="BookTitle">
         <div>
-          <img src={photo} height="400px" width="300px" alt="" />
+          <img src={bookDetails.imageurl} height="400px" width="300px" alt="" />
         </div>
         <div className="Rich">
           <p>

@@ -1,35 +1,94 @@
-.container {
+.navBarContainer {
+  /* background-color: red; */
   margin-left: auto;
   margin-right: auto;
   width: 1100px;
 }
-.LogPages {
-  /* height: 40px; */
-  background-color: greenyellow;
-  width: 300px;
-}
-.backing {
-  /* padding-top: 10px; */
-  color: aliceblue;
-}
-.border {
-  background-color: antiquewhite;
-  height: 350px;
-  width: 300px;
-}
+
 .parent {
   display: flex;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
 }
 .LogIn {
-  padding-top: 30px;
-  padding-left: 20px;
+  color: blueviolet;
+  font-size: large;
+  /* margin: 0;
+  padding: 0; */
 }
 .account {
-  padding-left: 20px;
+  margin: 0;
+  padding: 0;
 }
-.Gmail {
-  margin-left: 20px;
+.gmailInput {
+  border: none;
+  border-bottom: 1.3px solid black;
+  background-color: whitesmoke;
+  outline: none;
+  width: 250px;
+  margin-bottom: 30px;
 }
-.pass {
+.passInput {
+  border: none;
+  border-bottom: 1.3px solid black;
+  background-color: whitesmoke;
+  outline: none;
+  width: 250px;
+}
+.Loginbutton {
+  background-color: orange;
+  color: #fff;
+  border: none;
+  padding: 10px 50px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+.FOOTER {
+  color: blueviolet;
+}
+.header {
+  background-color: rgb(9, 232, 9);
+  height: 60px;
+}
+.backSection {
+  display: flex;
+}
+.backArrow {
+  padding-top: 12px;
   margin-left: 20px;
+  width: 40px;
+  height: 35px;
+  color: white;
+}
+.returnHome {
+  font-size: 20px;
+  padding: 15px 0 0 0;
+  color: white;
+  font-weight: bold;
+}
+.LogPages {
+  background-color: whitesmoke;
+  height: 500px;
+  width: 400px;
+  padding-left: 40px;
+}
+.LoginInput {
+  padding-top: 100px;
+}
+.forgot {
+  margin-top: 130px;
+}
+.LoginPage {
+  margin-top: 30px;
+}
+.PasswordIcon {
+  display: "flex";
+  align-items: center;
+  margin-right: 20px;
+}
+.GmailIcon {
+  display: "flex";
+  align-items: center;
+  margin-right: 20px;
 }
