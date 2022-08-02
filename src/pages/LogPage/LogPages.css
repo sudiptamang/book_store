@@ -1,43 +1,18 @@
-.navBarContainer {
-  /* background-color: red; */
-  margin-left: auto;
-  margin-right: auto;
-  width: 1100px;
-}
+.loginPageContainer {
+display: flex;
+margin-top: 40px;
+justify-content: center;  
 
-.parent {
-  display: flex;
-  margin-top: 20px;
-  justify-content: center;
-  align-items: center;
 }
 .LogIn {
   color: blueviolet;
-  font-size: large;
-  /* margin: 0;
-  padding: 0; */
-}
-.account {
   margin: 0;
   padding: 0;
-}
-.gmailInput {
-  border: none;
-  border-bottom: 1.3px solid black;
-  background-color: whitesmoke;
-  outline: none;
-  width: 250px;
-  margin-bottom: 30px;
-}
-.passInput {
-  border: none;
-  border-bottom: 1.3px solid black;
-  background-color: whitesmoke;
-  outline: none;
-  width: 250px;
+  margin-bottom: 10px;
+
 }
 .Loginbutton {
-  background-color: orange;
+  background-color: #F3CF11;
   color: #fff;
   border: none;
   padding: 10px 50px;
@@ -71,24 +46,25 @@
   background-color: whitesmoke;
   height: 500px;
   width: 400px;
-  padding-left: 40px;
-}
-.LoginInput {
-  padding-top: 100px;
-}
-.forgot {
-  margin-top: 130px;
-}
-.LoginPage {
-  margin-top: 30px;
-}
-.PasswordIcon {
-  display: "flex";
+  display: flex;
   align-items: center;
-  margin-right: 20px;
+  justify-content: center;
 }
-.GmailIcon {
-  display: "flex";
-  align-items: center;
-  margin-right: 20px;
+.LoginInputs   {
+display: flex;
+align-items: center;
+margin: 30px 0px;
+}
+
+.loginInput{
+  border: none;
+  border-bottom: 1.5px solid #aaa;
+  background-color: whitesmoke;
+  outline: none;
+  margin-left: 10px;
+  width: 250px;
+}
+.createAccount{
+  margin: 0;
+  padding: 0;
 }

@@ -22,7 +22,7 @@ const SignUpPage = () => {
       </div>
 
       <div className="container">
-        <img src={SignUpImg} alt="" height={"600px"} width={"600px"} />
+        <img src={SignUpImg} alt="" height={"550px"} width={"550px"} />
         <div>
           <form action="_blank" className="inputItems">
             <div className="input">
@@ -58,15 +58,15 @@ const SignUpPage = () => {
             </div>
             <div className="input radioBtn">
               <div>
-                <input type="radio" id="male" name="sex" value="male" />
+                <input type="radio" id="male" name="gender" value="male" />
                 <label for="male">Male</label>
               </div>
               <div>
-                <input type="radio" id="female" name="sex" value="female" />
+                <input type="radio" id="female" name="gender " value="female" />
                 <label for="female">Female</label>
               </div>
               <div>
-                <input type="radio" id="other" name="sex" value="other" />
+                <input type="radio" id="other" name="gender" value="other" />
                 <label for="other">Other</label>
               </div>
             </div>
