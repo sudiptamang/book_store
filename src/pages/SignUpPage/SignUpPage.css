@@ -24,16 +24,26 @@
     width: 100%;
     height: 60px;
 }
+.BackToHome{
+    margin: 10px 0 0 20px;
+}
+.BackToHome:hover{
+    background-color: rgb(28, 194, 28);
+    width: 110px;
+    height: 40px;
+    border-radius: 7px;
+}
 .backArrow{
-    padding-top: 12px;
-    margin-left: 20px;
+    margin: 1px 0 0 4px;
     width: 40px;    
     height: 35px; 
     color: white;   
 }
 
 .returnHome{
-    padding: 15px 0 0 0;
+    position: relative;
+    top: -10px;
+    left: -10;
     font-size: 20px;
     color: white;
     font-weight: bold;

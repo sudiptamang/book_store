@@ -9,14 +9,18 @@ import { MdEmail } from "react-icons/md";
 import { FaLock } from "react-icons/fa";
 import { TbBrandFacebook } from "react-icons/tb";
 import { AiOutlineGooglePlus } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const SignUpPage = () => {
   return (
     <div>
-          <div className="navBar">
+      <div className="navBar">
+          <Link to="/" className="BackToHome">            
             <HiArrowNarrowLeft className="backArrow" />
             <span className="returnHome">Back</span>
-          </div>
+          </Link>
+      </div>
+
       <div className="containers"> 
         <img src={SignUpImg} alt="" className="SignUpPageImg" />
         <div className="container">
