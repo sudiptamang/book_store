@@ -1,54 +1,3 @@
-<<<<<<< Updated upstream
-.containers{
-    display: flex;
-    width: 1300px;
-    margin-right: auto;
-    margin-left: auto;
-}
-.container{
-    width: 50%;
-    margin-right: 20px; 
-    
-}
-.SignUpPageImg{
-    width: 38%;
-    height: 80vh; 
-    position: relative;
-    top: 60px;
-    left: 130px;
-}
-.navBar{
-    display: flex;
-    justify-content: start;
-    background-color: rgb(9, 232, 9);
-    background-size: cover;
-    width: 100%;
-    height: 60px;
-}
-.BackToHome{
-    margin: 10px 0 0 20px;
-}
-.BackToHome:hover{
-    background-color: rgb(28, 194, 28);
-    width: 110px;
-    height: 40px;
-    border-radius: 7px;
-}
-.backArrow{
-    margin: 1px 0 0 4px;
-    width: 40px;    
-    height: 35px; 
-    color: white;   
-}
-
-.returnHome{
-    position: relative;
-    top: -10px;
-    left: -10;
-    font-size: 20px;
-    color: white;
-    font-weight: bold;
-=======
 .containers {
   display: flex;
   width: 1300px;
@@ -87,7 +36,6 @@
   font-size: 20px;
   color: white;
   font-weight: bold;
->>>>>>> Stashed changes
 }
 
 .inputItems {
