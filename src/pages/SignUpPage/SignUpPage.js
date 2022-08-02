@@ -15,13 +15,13 @@ const SignUpPage = () => {
   return (
     <div>
       <div className="navBar">
-          <Link to="/" className="BackToHome">            
-            <HiArrowNarrowLeft className="backArrow" />
-            <span className="returnHome">Back</span>
-          </Link>
+        <Link to="/" className="BackToHome">
+          <HiArrowNarrowLeft className="backArrow" />
+          <span className="returnHome">Back</span>
+        </Link>
       </div>
 
-      <div className="containers"> 
+      <div className="containers">
         <img src={SignUpImg} alt="" className="SignUpPageImg" />
         <div className="container">
           <form action="_blank" className="inputItems">
@@ -96,7 +96,6 @@ const SignUpPage = () => {
             </div>
           </form>
           <div class="inputItems1 ">
-
             <div className="input SignUpWiths">
               <button className="SignUpWith SignUpWithFb">
                 <TbBrandFacebook className="Icon" />
@@ -109,7 +108,7 @@ const SignUpPage = () => {
               </button>
             </div>
             <p className="siginUp">
-              Already Members? <a href="#">Login Here</a>
+              Already Members? <Link to={"/logpage"}>Login here</Link>
             </p>
           </div>
         </div>
