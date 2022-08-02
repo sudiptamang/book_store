@@ -21,9 +21,9 @@ const SignUpPage = () => {
         </Link>
       </div>
 
-      <div className="containers">
-        <img src={SignUpImg} alt="" className="SignUpPageImg" />
-        <div className="container">
+      <div className="container">
+        <img src={SignUpImg} alt="" height={"600px"} width={"600px"} />
+        <div>
           <form action="_blank" className="inputItems">
             <div className="input">
               <BsPersonFill />
@@ -107,7 +107,7 @@ const SignUpPage = () => {
                 <span className="icon">Google</span>
               </button>
             </div>
-            <p className="siginUp">
+            <p>
               Already Members? <Link to={"/logpage"}>Login here</Link>
             </p>
           </div>
