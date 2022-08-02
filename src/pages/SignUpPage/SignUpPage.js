@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./SignUpPage.css";
 import SignUpImg from "../../Assets/BookStoreSignUp.jpg";
 import { HiArrowNarrowLeft } from "react-icons/hi";
@@ -9,9 +9,38 @@ import { MdEmail } from "react-icons/md";
 import { FaLock } from "react-icons/fa";
 import { TbBrandFacebook } from "react-icons/tb";
 import { AiOutlineGooglePlus } from "react-icons/ai";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const SignUpPage = () => {
+  const [name, setName] = useState();
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
+  const navigate = useNavigate();
+
+  const handleJoin = () => {
+    fetch("http://localhost:3030/users/register", {
+      method: "POST",
+      body: JSON.stringify({
+        name: name,
+        email: email,
+        password: password,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.success) {
+          navigate("/logpage");
+        } else {
+          console.log(data);
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
   return (
     <div>
       <div className="navBar">
@@ -28,6 +57,7 @@ const SignUpPage = () => {
             <div className="input">
               <BsPersonFill />
               <input
+                onChange={(e) => setName(e.target.value)}
                 type="text"
                 placeholder="Full Name"
                 className="inputBox"
@@ -46,6 +76,7 @@ const SignUpPage = () => {
             <div className="input">
               <MdEmail />
               <input
+                onChange={(e) => setEmail(e.target.value)}
                 type="email"
                 placeholder="Email"
                 className="inputBox"
@@ -73,6 +104,7 @@ const SignUpPage = () => {
             <div className="input">
               <FaLock />
               <input
+                onChange={(e) => setPassword(e.target.value)}
                 type="password"
                 placeholder="New Password"
                 required
@@ -92,7 +124,9 @@ const SignUpPage = () => {
               By sigining up you agree to <a href="#">terms & condations</a>{" "}
             </p>
             <div className="input personInfos">
-              <button className="personInfo">Join</button>
+              <button className="personInfo" onClick={handleJoin}>
+                Join
+              </button>
             </div>
           </form>
           <div class="inputItems1 ">
