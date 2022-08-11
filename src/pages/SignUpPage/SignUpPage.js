@@ -17,7 +17,8 @@ const SignUpPage = () => {
   const [password, setPassword] = useState();
   const navigate = useNavigate();
 
-  const handleJoin = () => {
+  const handleJoin = (event) => {
+    event.preventDefault();
     fetch("http://localhost:3030/users/register", {
       method: "POST",
       body: JSON.stringify({
@@ -53,7 +54,7 @@ const SignUpPage = () => {
       <div className="container">
         <img src={SignUpImg} alt="" height={"550px"} width={"550px"} />
         <div>
-          <form action="_blank" className="inputItems">
+          <form className="inputItems">
             <div className="input">
               <BsPersonFill />
               <input
@@ -64,7 +65,7 @@ const SignUpPage = () => {
                 required
               />
             </div>
-            <div className="input">
+            {/* <div className="input">
               <AiFillMobile />
               <input
                 type="number"
@@ -72,7 +73,7 @@ const SignUpPage = () => {
                 className="inputBox"
                 required
               />
-            </div>
+            </div> */}
             <div className="input">
               <MdEmail />
               <input
@@ -83,11 +84,11 @@ const SignUpPage = () => {
                 required
               />
             </div>
-            <div className="input">
+            {/* <div className="input">
               <FaRegCalendarAlt />
-              <input type="date" className="inputBox dateIcon" />
-            </div>
-            <div className="input radioBtn">
+              <input type="date" className="inputBox dateIcon" /> */}
+            {/* </div> */}
+            {/* <div className="input radioBtn">
               <div>
                 <input type="radio" id="male" name="gender" value="male" />
                 <label for="male">Male</label>
@@ -100,7 +101,7 @@ const SignUpPage = () => {
                 <input type="radio" id="other" name="gender" value="other" />
                 <label for="other">Other</label>
               </div>
-            </div>
+            </div> */}
             <div className="input">
               <FaLock />
               <input
@@ -124,8 +125,8 @@ const SignUpPage = () => {
               By sigining up you agree to <a href="#">terms & condations</a>{" "}
             </p>
             <div className="input personInfos">
-              <button className="personInfo" onClick={handleJoin}>
-                Join
+              <button className="personInfo" type="submit" onClick={handleJoin}>
+                Submit
               </button>
             </div>
           </form>
