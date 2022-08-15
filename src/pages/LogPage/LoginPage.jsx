@@ -4,10 +4,10 @@ import { HiArrowNarrowLeft } from "react-icons/hi";
 import { AiOutlineMail } from "react-icons/ai";
 import { RiLockPasswordLine } from "react-icons/ri";
 import { Link,useNavigate } from "react-router-dom";
-import "./LogPages.css";
+import "./LoginPage.css";
 
 
-const LogPage = () => {
+const LoginPage = () => {
 
   const [password, setPassword] = useState();
   const [email, setEmail] = useState();
@@ -69,28 +69,22 @@ const LogPage = () => {
             <RiLockPasswordLine />
               <input className="loginInput" placeholder="Password"
                 onChange={(e) => setPassword(e.target.value)}
-<<<<<<< HEAD
+
                 value={password}
                 type="password"
               />
             </div>
 
-            <button className="Loginbutton" onClick={handleLoginClick}>
+            <button className="Loginbutton" onClick={handleLogin}>
               Login
             </button>
             <Link to={"/Forgotpassword"}>
               <p className="FOOTER">FORGOT LOGIN PASSWORD?</p>
             </Link>
-=======
-                />
-          </div>
-            <button className="Loginbutton" onClick={handleLogin}>Login</button> 
-            <p className="FOOTER">FORGOT LOGIN PASSWORD?</p>
->>>>>>> f34aecac30e736139200efecb5eebe476ea53e30
+            </div>
           </div>
         </div>
-          </div>
     </div>
   );
 };
-export default LogPage;
+export default LoginPage;
