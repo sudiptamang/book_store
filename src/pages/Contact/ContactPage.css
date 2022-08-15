@@ -1,0 +1,78 @@
+.contactcontainer {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1100px;
+}
+.ContactInformation {
+  height: 330px;
+  width: 250px;
+  background-color: blue;
+  border-radius: 5px;
+  margin-top: 50px;
+  padding-left: 20px;
+}
+.contactnavbar {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.information {
+  color: white;
+}
+.paragaph {
+  color: white;
+}
+/* .Details {
+  padding-top: 40px;
+} */
+.number {
+  color: aliceblue;
+}
+.Contactnumber {
+  margin-bottom: 40px;
+}
+.Contactemail {
+  margin-bottom: 40px;
+}
+.email {
+  color: aliceblue;
+}
+.location {
+  color: aliceblue;
+}
+.icon {
+  padding-top: 20px;
+}
+.facebook {
+  padding-right: 30px;
+}
+.twiter {
+  padding-right: 30px;
+}
+.contactBorder {
+  height: 330px;
+  width: 500px;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  margin-top: 50px;
+}
+/* .ContactFile {
+  display: flex;
+} */
+.ContactDetails {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.ContactInput {
+  padding-left: 10px;
+}
+.FullName {
+  margin-bottom: 15px;
+}
+.PhoneNumber {
+  margin-bottom: 15px;
+}
+.EmailAdress {
+  margin-bottom: 15px;
+}

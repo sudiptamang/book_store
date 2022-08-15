@@ -1,18 +1,19 @@
 .loginPageContainer {
-display: flex;
-margin-top: 40px;
-justify-content: center;  
-
+  display: flex;
+  margin-top: 40px;
+  justify-content: center;
+}
+.BacksHome {
+  display: flex;
 }
 .LogIn {
   color: blueviolet;
   margin: 0;
   padding: 0;
   margin-bottom: 10px;
-
 }
 .Loginbutton {
-  background-color: #F3CF11;
+  background-color: #f3cf11;
   color: #fff;
   border: none;
   padding: 10px 50px;
@@ -36,7 +37,7 @@ justify-content: center;
   height: 35px;
   color: white;
 }
-.returnHome {
+.returnHomefromLogin {
   font-size: 20px;
   padding: 15px 0 0 0;
   color: white;
@@ -50,13 +51,13 @@ justify-content: center;
   align-items: center;
   justify-content: center;
 }
-.LoginInputs   {
-display: flex;
-align-items: center;
-margin: 30px 0px;
+.LoginInputs {
+  display: flex;
+  align-items: center;
+  margin: 30px 0px;
 }
 
-.loginInput{
+.loginInput {
   border: none;
   border-bottom: 1.5px solid #aaa;
   background-color: whitesmoke;
@@ -64,7 +65,7 @@ margin: 30px 0px;
   margin-left: 10px;
   width: 250px;
 }
-.createAccount{
+.createAccount {
   margin: 0;
   padding: 0;
 }

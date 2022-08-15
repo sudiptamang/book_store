@@ -8,6 +8,7 @@ import SellsPage from "./pages/Sells/SellsPage";
 import BuyPage from "./pages/Buy/BuyPages";
 import LogPage from "./pages/LogPage/LogPages";
 import SignUpPage from "./pages/SignUpPage/SignUpPage";
+import ForgotPassword from "./pages/LogPage/ForgotPassword/ForgotPassword";
 function App() {
   return (
     <div>
@@ -19,6 +20,7 @@ function App() {
         <Route path="/buypage" element={<BuyPage />} />
         <Route path="/logpage" element={<LogPage />} />
         <Route path="/Signupage" element={<SignUpPage />} />
+        <Route path="/ForgotPassword" element={<ForgotPassword />} />
       </Routes>
     </div>
   );
