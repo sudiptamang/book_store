@@ -17,8 +17,8 @@ const SignUpPage = () => {
   const [password, setPassword] = useState();
   const navigate = useNavigate();
 
-  const handleJoin = (e) => {
-    e.preventDefault();
+  const handleJoin = (event) => {
+    event.preventDefault();
     fetch("http://localhost:3030/users/register", {
       method: "POST",
       body: JSON.stringify({
@@ -65,7 +65,7 @@ const SignUpPage = () => {
                 required
               />
             </div>
-            <div className="input">
+            {/* <div className="input">
               <AiFillMobile />
               <input
                 type="number"
@@ -73,7 +73,7 @@ const SignUpPage = () => {
                 className="inputBox"
                 required
               />
-            </div>
+            </div> */}
             <div className="input">
               <MdEmail />
               <input
@@ -84,10 +84,10 @@ const SignUpPage = () => {
                 required
               />
             </div>
-            <div className="input">
+            {/* <div className="input">
               <FaRegCalendarAlt />
-              <input type="date" className="inputBox dateIcon" />
-            </div>
+              <input type="date" className="inputBox dateIcon" /> */}
+            {/* </div> */}
             {/* <div className="input radioBtn">
               <div>
                 <input type="radio" id="male" name="gender" value="male" />
@@ -125,8 +125,8 @@ const SignUpPage = () => {
               By sigining up you agree to <a href="#">terms & condations</a>{" "}
             </p>
             <div className="input personInfos">
-              <button className="personInfo" onClick={handleJoin}>
-                Join
+              <button className="personInfo" type="submit" onClick={handleJoin}>
+                Submit
               </button>
             </div>
           </form>
