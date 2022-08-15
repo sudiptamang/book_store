@@ -20,8 +20,8 @@ const Home = () => {
     <div>
       <Navbar />
       <div className="searchInputCard">
-        <input className="searchInput" placeholder="Search here....." />
-        <BsCart className="cartIcon" />
+         <input className="searchInput" placeholder="Search here....." />
+          <BsCart className="cartIcon" size={"40px"} />
       </div>
 
       <div className="homeContainer">
