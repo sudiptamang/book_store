@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../../components/NavBar/NavBar";
-import photo from "../../Assets/library.jpg";
+
 import "./BookDetail.css";
 import { useParams } from "react-router-dom";
 
 function Book() {
   const [bookDetails, setBookDetails] = useState([]);
   const params = useParams();
+  const [quantity, setQuantity] = useState(1);
 
   useEffect(() => {
     fetch(`http://localhost:3030/book/${params.bookId}`)
@@ -41,9 +42,17 @@ function Book() {
               <p>Quantity</p>
             </div>
             <div className="rate">
-              <button className="minus">-</button>
-              <span>0</span>
-              <button className="add">+</button>
+              <button
+                className="minus"
+                onClick={() => setQuantity(quantity - 1)}
+                disabled={quantity == 1}
+              >
+                -
+              </button>
+              <span>{quantity}</span>
+              <button className="add" onClick={() => setQuantity(quantity + 1)}>
+                +
+              </button>
             </div>
           </div>
           <div>

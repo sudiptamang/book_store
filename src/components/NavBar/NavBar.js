@@ -14,7 +14,7 @@ const Navbar = () => {
           justifyContent: "center",
         }}
       >
-        <Link to="/">
+        {/* <Link to="/">
           <li className="navBarList">Save more on App</li>
         </Link>
 
@@ -30,7 +30,7 @@ const Navbar = () => {
         </Link>
         <Link to="/">
           <li className="navBarList">Track my order</li>
-        </Link>
+        </Link> */}
       </ul>
       <div className="navBarContainer">
         <nav className="Header">
