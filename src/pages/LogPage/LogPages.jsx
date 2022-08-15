@@ -78,7 +78,9 @@ const LogPage = () => {
             <button className="Loginbutton" onClick={handleLoginClick}>
               Login
             </button>
-            <p className="FOOTER">FORGOT LOGIN PASSWORD?</p>
+            <Link to={"/Forgotpassword"}>
+              <p className="FOOTER">FORGOT LOGIN PASSWORD?</p>
+            </Link>
           </div>
         </div>
       </div>

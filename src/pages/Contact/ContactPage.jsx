@@ -5,10 +5,12 @@ import { GrLocation } from "react-icons/gr";
 import { GrFacebookOption } from "react-icons/gr";
 import { BsTwitter } from "react-icons/bs";
 import { BsInstagram } from "react-icons/bs";
+import Navbar from "../../components/NavBar/NavBar";
 import "./ContactPage.css";
 const ContactPage = () => {
   return (
     <div>
+      <Navbar />
       <div className="contactcontainer">
         <h2>Contact Us</h2>
         <h5>Any question or remarks? Just write us a message!</h5>
