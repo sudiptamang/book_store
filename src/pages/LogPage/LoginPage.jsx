@@ -59,15 +59,21 @@ const LoginPage = () => {
             <Link to={"/Signupage"}>
               <p className="createAccount">or create account</p>
             </Link>
-          <div className="LoginInputs">
-            <AiOutlineMail  />
-              <input className="loginInput" placeholder="Email"
+            <div className="LoginInputs">
+              <AiOutlineMail />
+              <input
+                className="loginInput"
+                placeholder="Email"
+                type="email"
                 onChange={(e) => setEmail(e.target.value)}
-                />
-          </div>
-          <div className="LoginInputs">
-            <RiLockPasswordLine />
-              <input className="loginInput" placeholder="Password"
+                value={email}
+              />
+            </div>
+            <div className="LoginInputs">
+              <RiLockPasswordLine />
+              <input
+                className="loginInput"
+                placeholder="Password"
                 onChange={(e) => setPassword(e.target.value)}
 
                 value={password}
