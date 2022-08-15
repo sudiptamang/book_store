@@ -1,12 +1,12 @@
 import React from "react";
-import "./CreateNewPassword.css";
+import "./ForgotPassword.css";
 const ForgotPassword = () => {
   return (
     <div>
       <div class="navBar">
         <nav class="back">Back</nav>
       </div>
-      <div class="container">
+      <div class="ForgotPasswordContainer">
         <h1>Create a new password</h1>
         <p class="contain">
           Your new password must be different from previous used password.
