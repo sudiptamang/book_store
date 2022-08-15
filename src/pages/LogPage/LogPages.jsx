@@ -1,40 +1,45 @@
-import React, { useState } from "react";
+import React,{useState} from "react";
 import MyImage from "../../Assets/library.jpg";
 import { HiArrowNarrowLeft } from "react-icons/hi";
 import { AiOutlineMail } from "react-icons/ai";
 import { RiLockPasswordLine } from "react-icons/ri";
-import { Link, useNavigate } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 import "./LogPages.css";
 
+
 const LogPage = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+
+  const [password, setPassword] = useState();
+  const [email, setEmail] = useState();
   const navigate = useNavigate();
 
-  const handleLoginClick = () => {
+  const handleLogin = (event) => {
+    event.preventDefault();
     fetch("http://localhost:3030/users/login", {
       method: "POST",
       body: JSON.stringify({
-        email,
-        password,
+        password: password,
+        email: email,
+    
       }),
       headers: {
         "Content-Type": "application/json",
       },
     })
       .then((response) => response.json())
+  
       .then((data) => {
+        console.log(data)
         if (data.success) {
           navigate("/");
         } else {
-          console.log("data", data);
+          console.log("data",data);
         }
       })
       .catch((err) => {
         console.log(err);
       });
   };
-
   return (
     <div>
       <div className="header">
@@ -54,22 +59,17 @@ const LogPage = () => {
             <Link to={"/Signupage"}>
               <p className="createAccount">or create account</p>
             </Link>
-            <div className="LoginInputs">
-              <AiOutlineMail />
-              <input
-                className="loginInput"
-                placeholder="Email"
-                type="email"
+          <div className="LoginInputs">
+            <AiOutlineMail  />
+              <input className="loginInput" placeholder="Email"
                 onChange={(e) => setEmail(e.target.value)}
-                value={email}
-              />
-            </div>
-            <div className="LoginInputs">
-              <RiLockPasswordLine />
-              <input
-                className="loginInput"
-                placeholder="Password"
+                />
+          </div>
+          <div className="LoginInputs">
+            <RiLockPasswordLine />
+              <input className="loginInput" placeholder="Password"
                 onChange={(e) => setPassword(e.target.value)}
+<<<<<<< HEAD
                 value={password}
                 type="password"
               />
@@ -81,9 +81,15 @@ const LogPage = () => {
             <Link to={"/Forgotpassword"}>
               <p className="FOOTER">FORGOT LOGIN PASSWORD?</p>
             </Link>
+=======
+                />
+          </div>
+            <button className="Loginbutton" onClick={handleLogin}>Login</button> 
+            <p className="FOOTER">FORGOT LOGIN PASSWORD?</p>
+>>>>>>> f34aecac30e736139200efecb5eebe476ea53e30
           </div>
         </div>
-      </div>
+          </div>
     </div>
   );
 };
