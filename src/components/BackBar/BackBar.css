@@ -1,0 +1,17 @@
+.header {
+    background-color: rgb(9, 232, 9);
+    height: 60px;
+  }
+  .backSection {
+    display: flex;
+    align-items: center;
+    padding: 10px 0px 0px 20px;
+    width: 10%;
+    color: white;
+    font-weight: bold;
+}
+
+  .BackButton{
+    font-size: 20px;
+   
+  }

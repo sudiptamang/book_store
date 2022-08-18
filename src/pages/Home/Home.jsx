@@ -21,7 +21,7 @@ const Home = () => {
       <Navbar />
       <div className="searchInputCard">
          <input className="searchInput" placeholder="Search here....." />
-          <BsCart className="cartIcon" size={"40px"} />
+          <BsCart size={"35px"} />
       </div>
 
       <div className="homeContainer">

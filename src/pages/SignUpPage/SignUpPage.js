@@ -10,6 +10,7 @@ import { FaLock } from "react-icons/fa";
 import { TbBrandFacebook } from "react-icons/tb";
 import { AiOutlineGooglePlus } from "react-icons/ai";
 import { Link, useNavigate } from "react-router-dom";
+import BackBar from "../../components/BackBar/BackBar";
 
 const SignUpPage = () => {
   const [name, setName] = useState();
@@ -44,13 +45,7 @@ const SignUpPage = () => {
   };
   return (
     <div>
-      <div className="navBar">
-        <Link to="/" className="BackToHome">
-          <HiArrowNarrowLeft className="backArrow" />
-          <span className="returnHome">Back</span>
-        </Link>
-      </div>
-
+      <BackBar />
       <div className="container">
         <img src={SignUpImg} alt="" height={"550px"} width={"550px"} />
         <div>
