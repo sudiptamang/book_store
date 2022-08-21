@@ -9,6 +9,7 @@ import BuyPage from "./pages/Buy/BuyPages";
 import LoginPage from "./pages/LogPage/LoginPage";
 import SignUpPage from "./pages/SignUpPage/SignUpPage";
 import ForgotPassword from "./pages/LogPage/ForgotPassword/ForgotPassword";
+import ResetPassword from "./pages/LogPage/ResetPassword/ResetPassword";
 function App() {
   return (
     <div>
@@ -20,6 +21,7 @@ function App() {
         <Route path="/buypage" element={<BuyPage />} />
         <Route path="/logpage" element={<LoginPage />} />
         <Route path="/Signupage" element={<SignUpPage />} />
+        <Route path="/ResetPassword" element={<ResetPassword />} />
         <Route path="/ForgotPassword" element={<ForgotPassword />} />
       </Routes>
     </div>

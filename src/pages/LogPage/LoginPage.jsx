@@ -1,14 +1,12 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import MyImage from "../../Assets/library.jpg";
 import { HiArrowNarrowLeft } from "react-icons/hi";
 import { AiOutlineMail } from "react-icons/ai";
 import { RiLockPasswordLine } from "react-icons/ri";
-import { Link,useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./LoginPage.css";
 
-
 const LoginPage = () => {
-
   const [password, setPassword] = useState();
   const [email, setEmail] = useState();
   const navigate = useNavigate();
@@ -20,20 +18,19 @@ const LoginPage = () => {
       body: JSON.stringify({
         password: password,
         email: email,
-    
       }),
       headers: {
         "Content-Type": "application/json",
       },
     })
       .then((response) => response.json())
-  
+
       .then((data) => {
-        console.log(data)
+        console.log(data);
         if (data.success) {
           navigate("/");
         } else {
-          console.log("data",data);
+          console.log("data", data);
         }
       })
       .catch((err) => {
@@ -75,7 +72,6 @@ const LoginPage = () => {
                 className="loginInput"
                 placeholder="Password"
                 onChange={(e) => setPassword(e.target.value)}
-
                 value={password}
                 type="password"
               />
@@ -84,12 +80,12 @@ const LoginPage = () => {
             <button className="Loginbutton" onClick={handleLogin}>
               Login
             </button>
-            <Link to={"/Forgotpassword"}>
+            <Link to={"/ResetPassword"}>
               <p className="FOOTER">FORGOT LOGIN PASSWORD?</p>
             </Link>
-            </div>
           </div>
         </div>
+      </div>
     </div>
   );
 };
