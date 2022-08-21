@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import MyImage from "../../Assets/library.jpg";
-import { HiArrowNarrowLeft } from "react-icons/hi";
 import { AiOutlineMail } from "react-icons/ai";
 import { RiLockPasswordLine } from "react-icons/ri";
 import { Link, useNavigate } from "react-router-dom";
 import "./LoginPage.css";
+import BackBar from "../../components/BackBar/BackBar";
 
 const LoginPage = () => {
   const [password, setPassword] = useState();
@@ -39,12 +39,7 @@ const LoginPage = () => {
   };
   return (
     <div>
-      <div className="header">
-        <div className="backSection">
-          <HiArrowNarrowLeft className="backArrow" />
-          <span className="returnHome">Back</span>
-        </div>
-      </div>
+      <BackBar/>
       <div className="loginPageContainer">
         <div>
           <img src={MyImage} height="500px" width="400px" alt="" />
