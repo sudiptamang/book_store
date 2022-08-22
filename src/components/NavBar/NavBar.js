@@ -1,7 +1,7 @@
 import React from "react";
 import MyImage from "../../Assets/book.webp";
 import "./navBar.css";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -47,31 +47,32 @@ const Navbar = () => {
               style={{
                 listStyle: "none",
                 display: "flex",
+                color: "black",
               }}
             >
-              <Link to="/">
+              <NavLink to="/">
                 <li className="navBarList">Home </li>
-              </Link>
-              <Link to="/contactpage">
+              </NavLink>
+              <NavLink to="/contactpage">
                 <li className="navBarList">Contact </li>
-              </Link>
+              </NavLink>
 
-              <Link to="/sellspage">
+              <NavLink to="/sellspage">
                 <li className="navBarList">Sells</li>
-              </Link>
-              <Link to="/BuyPage">
+              </NavLink>
+              <NavLink to="/BuyPage">
                 <li className="navBarList">Buy </li>
-              </Link>
+              </NavLink>
             </ul>
             <div>
               <ul style={{ listStyle: "none", display: "flex" }}>
-                <li>Sanam Login</li>
-                <Link to="/LogPage">
+                {/* <li>Sanam Login</li> */}
+                <NavLink to="/LogPage">
                   <li className="navBarList">Log in</li>
-                </Link>
-                <Link to="/Signupage">
+                </NavLink>
+                <NavLink to="/Signupage">
                   <li className="navBarList">SignUp</li>
-                </Link>
+                </NavLink>
               </ul>
             </div>
           </div>
