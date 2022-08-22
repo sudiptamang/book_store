@@ -26,8 +26,15 @@ const LoginPage = () => {
       .then((response) => response.json())
 
       .then((data) => {
-        console.log(data);
         if (data.success) {
+          localStorage.setItem(
+            "user",
+            JSON.stringify({
+              email: data.email,
+              name: data.name,
+              token: data.token,
+            })
+          );
           navigate("/");
         } else {
           console.log("data", data);
@@ -39,7 +46,7 @@ const LoginPage = () => {
   };
   return (
     <div>
-      <BackBar/>
+      <BackBar />
       <div className="loginPageContainer">
         <div>
           <img src={MyImage} height="500px" width="400px" alt="" />

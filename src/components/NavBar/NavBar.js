@@ -4,6 +4,7 @@ import "./navBar.css";
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
+  const userDetail = JSON.parse(localStorage.getItem("user"));
   return (
     <div>
       <ul
@@ -66,13 +67,18 @@ const Navbar = () => {
             </ul>
             <div>
               <ul style={{ listStyle: "none", display: "flex" }}>
-                {/* <li>Sanam Login</li> */}
-                <NavLink to="/LogPage">
-                  <li className="navBarList">Log in</li>
-                </NavLink>
-                <NavLink to="/Signupage">
-                  <li className="navBarList">SignUp</li>
-                </NavLink>
+                {userDetail ? (
+                  <li>{userDetail.name}</li>
+                ) : (
+                  <>
+                    <NavLink to="/LogPage">
+                      <li className="navBarList">Log in</li>
+                    </NavLink>
+                    <NavLink to="/Signupage">
+                      <li className="navBarList">SignUp</li>
+                    </NavLink>
+                  </>
+                )}
               </ul>
             </div>
           </div>
