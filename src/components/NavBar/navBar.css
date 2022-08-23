@@ -18,6 +18,12 @@
   display: flex;
   justify-content: space-between;
 }
+.userName{
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(16, 9, 214);
+
+}
 .navBarList {
   margin-left: 40px;
   text-decoration: none;
@@ -34,5 +40,42 @@
 }
 .active{
   text-decoration: underline;
+}
 
+/* Style for Personal Information */
+.myBookStore{
+  width: 200px;
+  margin: 10px 0 20px 30px;
+}
+.dropDown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropDown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 360px;
+  min-height: 260px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border-radius: 13px;
+  z-index: 1;
+}
+
+/* Dropdown Content insider */
+.containerName{
+  margin-bottom: 7px;
+  color: gray;
+
+}
+
+.containers{
+  list-style: none;
+  font-size: 20px;
+  background-color: rgb(242, 242, 242);
+}
+.containers li{
+margin-left: -40px;
 }

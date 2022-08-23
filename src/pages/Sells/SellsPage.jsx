@@ -20,11 +20,11 @@ const SellsPage = () => {
       </div>     
  
        <div>
-        Authors: <input type="text" className=" BookInfo" placeholder=" Author's Name"/>
+        Authors : <input type="text" className=" BookInfo" placeholder=" Author's Name"/>
         </div> 
             
       <div>
-        Price : <input type="number" className="BookPrice BookInfo" placeholder="Price"/>
+        Price : <input type="number" className=" BookInfo" placeholder="Price"/>
       </div> 
       <button className="SellsBtn">Sell</button>  
      </div>

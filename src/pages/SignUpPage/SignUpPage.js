@@ -125,7 +125,7 @@ const SignUpPage = () => {
               </button>
             </div>
           </form>
-          <div class="inputItems1 ">
+          <div className="inputItems1 ">
             <div className="input SignUpWiths">
               <button className="SignUpWith SignUpWithFb">
                 <TbBrandFacebook className="Icon" />
