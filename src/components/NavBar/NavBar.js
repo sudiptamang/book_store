@@ -1,18 +1,15 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import MyImage from "../../Assets/book.webp";
 import "./navBar.css";
 import { Link, NavLink } from "react-router-dom";
 
-
-
 const Navbar = () => {
-  const[dropDown, setDropDown] = useState(false);
+  const [dropDown, setDropDown] = useState(false);
 
+  const DropDownMenu = () => {
+    setDropDown(!dropDown);
+  };
 
-  const DropDownMenu = () =>{
-    setDropDown(true)
-  
-  }
   const userDetail = JSON.parse(localStorage.getItem("user"));
   return (
     <div>
@@ -23,25 +20,7 @@ const Navbar = () => {
           display: "flex",
           justifyContent: "center",
         }}
-      >
-        {/* <Link to="/">
-          <li className="navBarList">Save more on App</li>
-        </Link>
-
-        <Link to="/">
-          <li className="navBarList">Book Store Affilicate program</li>
-        </Link>
-
-        <Link to="/">
-          <li className="navBarList">Sells on book store</li>
-        </Link>
-        <Link to="/">
-          <li className="navBarList">Customer Care</li>
-        </Link>
-        <Link to="/">
-          <li className="navBarList">Track my order</li>
-        </Link> */}
-      </ul>
+      ></ul>
       <div className="navBarContainer">
         <nav className="Header">
           <Link to={"/"} className="link">
@@ -83,39 +62,38 @@ const Navbar = () => {
               <ul style={{ listStyle: "none", display: "flex" }}>
                 {userDetail ? (
                   <div className="dropDown">
-                    <li className="userName" onClick={DropDownMenu}  >{userDetail.name}</li>
-                    <div id="myDropDown" class="dropDown-content">
-                      <div className="myBookStore"
-                      dropDown={dropDown}
-                   >
-                      <h1 className="containerName">General</h1>
-                        <ul className="containers">
-                          <li>Manage Account </li>
-                          <li>Payments</li>
-                          <li>Settings </li>
-                          <li>Invite friends</li>
-                          <li>Support</li>
-                        </ul>                        
-                        <h1 className="containerName">Buying</h1>
-                        <ul className="containers">
-                          <li>Post of request</li>
-                          <li>Manage request</li>
-           
-                        </ul>
-                        <h1 className="containerName">Selling</h1>
-                        <ul  className="containers">
-                          <li>Post of Selling</li>
-                          <li>Manage Selling</li>
-                        </ul>
-                        <h1 className="containerName">Login</h1>
-                        <ul className="containers">
-                          <li>Switch Account</li>
-                          <li>Log Out</li>
-           
-                        </ul>
-                      </div>  
-
-                    </div> 
+                    <li className="userName" onClick={DropDownMenu}>
+                      {userDetail.name}
+                    </li>
+                    {dropDown ? (
+                      <div id="myDropDown" class="dropDown-content">
+                        <div className="myBookStore">
+                          <h1 className="containerName">General</h1>
+                          <ul className="containers">
+                            <li>Manage Account </li>
+                            <li>Payments</li>
+                            <li>Settings </li>
+                            <li>Invite friends</li>
+                            <li>Support</li>
+                          </ul>
+                          <h1 className="containerName">Buying</h1>
+                          <ul className="containers">
+                            <li>Post of request</li>
+                            <li>Manage request</li>
+                          </ul>
+                          <h1 className="containerName">Selling</h1>
+                          <ul className="containers">
+                            <li>Post of Selling</li>
+                            <li>Manage Selling</li>
+                          </ul>
+                          <h1 className="containerName">Login</h1>
+                          <ul className="containers">
+                            <li>Switch Account</li>
+                            <li>Log Out</li>
+                          </ul>
+                        </div>
+                      </div>
+                    ) : null}
                   </div>
                 ) : (
                   <>

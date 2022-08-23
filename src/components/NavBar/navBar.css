@@ -31,10 +31,7 @@
 .appName{
   font-family: 'sans-serif fonts';
 }
-/* .navBarList:hover {
-  font-size: 20px;
 
-} */
 .link{
   color:black;
 }
@@ -42,7 +39,6 @@
   text-decoration: underline;
 }
 
-/* Style for Personal Information */
 .myBookStore{
   width: 200px;
   margin: 10px 0 20px 30px;
@@ -52,9 +48,7 @@
   display: inline-block;
 }
 
-/* Dropdown Content (Hidden by Default) */
 .dropDown-content {
-  display: none;
   position: absolute;
   background-color: #f1f1f1;
   min-width: 360px;
@@ -64,7 +58,6 @@
   z-index: 1;
 }
 
-/* Dropdown Content insider */
 .containerName{
   margin-bottom: 7px;
   color: gray;
