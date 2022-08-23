@@ -1,0 +1,31 @@
+.Cartimage {
+  height: 100px;
+  width: 70px;
+}
+.Bookparagaph {
+  width: 400px;
+  margin-left: 20px;
+}
+.cartheader {
+  display: flex;
+}
+.BookPrice {
+  color: red;
+}
+.totalprice {
+  display: flex;
+}
+.Subtotal {
+  padding-right: 80px;
+}
+.text {
+  width: 200px;
+  padding: 10px;
+}
+.Applyprice {
+  padding: 10px;
+  margin-left: 10px;
+  background-color: blue;
+  border: none;
+  color: aliceblue;
+}

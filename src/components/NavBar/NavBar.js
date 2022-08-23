@@ -59,8 +59,8 @@ const Navbar = () => {
               <Link to="/sellspage">
                 <li className="navBarList">Sells</li>
               </Link>
-              <Link to="/BuyPage">
-                <li className="navBarList">Buy </li>
+              <Link to="/cartPage">
+                <li className="navBarList">Cart </li>
               </Link>
             </ul>
             <div>

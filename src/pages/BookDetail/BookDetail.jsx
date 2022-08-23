@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../../components/NavBar/NavBar";
+import { Link } from "react-router-dom";
 
 import "./BookDetail.css";
 import { useParams } from "react-router-dom";
@@ -57,7 +58,9 @@ function Book() {
           </div>
           <div>
             <button className="Buy">Buy Now</button>
-            <button className="cart">Add to cart</button>
+            <Link to={"/cartpage"}>
+              <button className="cart">Add to cart</button>
+            </Link>
           </div>
         </div>
       </div>
