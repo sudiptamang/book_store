@@ -1,9 +1,10 @@
 import React from "react";
 import MyImage from "../../Assets/book.webp";
 import "./navBar.css";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
+  const userDetail = JSON.parse(localStorage.getItem("user"));
   return (
     <div>
       <ul
@@ -47,31 +48,44 @@ const Navbar = () => {
               style={{
                 listStyle: "none",
                 display: "flex",
+                color: "black",
               }}
             >
-              <Link to="/">
+              <NavLink to="/">
                 <li className="navBarList">Home </li>
-              </Link>
-              <Link to="/contactpage">
+              </NavLink>
+              <NavLink to="/contactpage">
                 <li className="navBarList">Contact </li>
-              </Link>
+              </NavLink>
 
-              <Link to="/sellspage">
+              <NavLink to="/sellspage">
                 <li className="navBarList">Sells</li>
+<<<<<<< HEAD
               </Link>
               <Link to="/cartPage">
                 <li className="navBarList">Cart </li>
               </Link>
+=======
+              </NavLink>
+              <NavLink to="/BuyPage">
+                <li className="navBarList">Buy </li>
+              </NavLink>
+>>>>>>> 3e9c1158e0033db30385c16c5730437d9671850a
             </ul>
             <div>
               <ul style={{ listStyle: "none", display: "flex" }}>
-                <li>Sanam Login</li>
-                <Link to="/LogPage">
-                  <li className="navBarList">Log in</li>
-                </Link>
-                <Link to="/Signupage">
-                  <li className="navBarList">SignUp</li>
-                </Link>
+                {userDetail ? (
+                  <li>{userDetail.name}</li>
+                ) : (
+                  <>
+                    <NavLink to="/LogPage">
+                      <li className="navBarList">Log in</li>
+                    </NavLink>
+                    <NavLink to="/Signupage">
+                      <li className="navBarList">SignUp</li>
+                    </NavLink>
+                  </>
+                )}
               </ul>
             </div>
           </div>

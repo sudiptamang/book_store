@@ -1,0 +1,56 @@
+.SellsContainers{
+width: 600px;
+height: auto;
+margin: 0 auto 0 auto;
+
+
+}
+.SellsPageWelCome{
+    color: rgb(0, 174, 243);
+}
+.WelCome{
+    color: blue;
+    font-style: italic;
+}
+.SellsContainer{
+    width: 350px;
+    height: auto;
+    margin: 0 auto 0 auto;
+    font-weight: bold;
+
+}
+.SellInfo{
+    font-size: 18px;
+    width: 550px;
+    height: auto;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+   
+}
+.ImportImg{
+    color: rgba(0, 183, 255, 0.697);
+}
+
+.BookInfo{
+    width: 200px;
+    height: 30px;
+    border: 0;
+    border-style: none;
+    font-size: 13px;
+    border-bottom: 1px gray solid;
+    margin-top: 20px;
+    outline: none;
+
+}
+.SellsBtn{
+    width: 240px;
+    height: 35px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: red;
+    color: white;
+    border-radius: 6px;
+    border: none;
+    margin: 30px 0 50px 0;
+}
