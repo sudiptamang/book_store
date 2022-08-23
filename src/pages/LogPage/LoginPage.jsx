@@ -9,7 +9,9 @@ import BackBar from "../../components/BackBar/BackBar";
 const LoginPage = () => {
   const [password, setPassword] = useState();
   const [email, setEmail] = useState();
+  const [data, setData] = useState([])
   const navigate = useNavigate();
+ 
 
   const handleLogin = (event) => {
     event.preventDefault();
@@ -37,6 +39,7 @@ const LoginPage = () => {
           );
           navigate("/");
         } else {
+          setData(data)
           console.log("data", data);
         }
       })
@@ -78,6 +81,7 @@ const LoginPage = () => {
                 type="password"
               />
             </div>
+            <p className="message">{ data.message}</p>
 
             <button className="Loginbutton" onClick={handleLogin}>
               Login

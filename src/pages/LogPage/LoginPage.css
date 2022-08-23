@@ -37,6 +37,9 @@
   height: 35px;
   color: white;
 }
+.message{
+  color: red;
+}
 
 .returnHomefromLogin {
   font-size: 20px;
