@@ -33,16 +33,19 @@ margin: 0 auto 0 auto;
 }
 
 .BookInfo{
-    width: 200px;
+    width: 240px;
     height: 30px;
     border: 0;
     border-style: none;
     font-size: 13px;
-    border-bottom: 1px gray solid;
-    margin: 20px 0 0 20px;
+    border-bottom: 1px rgb(153, 150, 150) solid;
     outline: none;
 
 }
+.BookName{
+    margin-top: 20px;
+}
+
 .SellsBtn{
     width: 240px;
     height: 35px;

@@ -13,18 +13,21 @@ const SellsPage = () => {
       <h2 className="ImportImg">Upload Your Book's Image</h2>
        <input type="file" id="file-input" width="40px"/>
       <div>
-        Name : <input type="text" className=" BookInfo" placeholder=" Book's Name"/>
+        <div className="BookName">Name </div><input type="text" className=" BookInfo" placeholder=" Book's Name"/>
       </div>      
       <div>
-       Title : <input type="text" className=" BookInfo" placeholder=" Book's Title"/>
+      <div className="BookName">Title </div>  <input type="text" className=" BookInfo" placeholder=" Book's Title"/>
       </div>     
  
        <div>
-        Authors : <input type="text" className=" BookInfo" placeholder=" Author's Name"/>
+       <div className="BookName"> Authors </div> <input type="text" className=" BookInfo" placeholder=" Author's Name"/>
         </div> 
             
-      <div>
-        Price : <input type="number" className=" BookInfo" placeholder="Price"/>
+        <div>
+      <div className="BookName">Price </div> <input type="number" className=" BookInfo" placeholder="Price"/>
+      </div>  
+       <div>
+      <div className="BookName">Quantity </div> <input type="number" className=" BookInfo" placeholder="Quantity"/>
       </div> 
       <button className="SellsBtn">Sell</button>  
      </div>
