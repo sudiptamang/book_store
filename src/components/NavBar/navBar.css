@@ -25,9 +25,12 @@
 .appName{
   font-family: 'sans-serif fonts';
 }
-.navBarList:hover {
+/* .navBarList:hover {
   font-size: 20px;
 
+} */
+.link{
+  color:black;
 }
 .active{
   text-decoration: underline;

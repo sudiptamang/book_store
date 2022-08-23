@@ -1,7 +1,7 @@
 import React from "react";
 import MyImage from "../../Assets/book.webp";
 import "./navBar.css";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const userDetail = JSON.parse(localStorage.getItem("user"));
@@ -35,10 +35,12 @@ const Navbar = () => {
       </ul>
       <div className="navBarContainer">
         <nav className="Header">
-          <div className="logoAndName">
-            <img src={MyImage} height="60px" width="60px" alt="" />
-            <h3 className="appName">BOOK STORE</h3>
-          </div>
+          <Link to={"/"} className="link">
+            <div className="logoAndName">
+              <img src={MyImage} height="60px" width="60px" alt="" />
+              <h3 className="appName">BOOK STORE</h3>
+            </div>
+          </Link>
           <div
             style={{
               display: "flex",
@@ -60,17 +62,13 @@ const Navbar = () => {
 
               <NavLink to="/sellspage">
                 <li className="navBarList">Sells</li>
-<<<<<<< HEAD
-              </Link>
-              <Link to="/cartPage">
+              </NavLink>
+              <NavLink to="/cartPage">
                 <li className="navBarList">Cart </li>
-              </Link>
-=======
               </NavLink>
               <NavLink to="/BuyPage">
                 <li className="navBarList">Buy </li>
               </NavLink>
->>>>>>> 3e9c1158e0033db30385c16c5730437d9671850a
             </ul>
             <div>
               <ul style={{ listStyle: "none", display: "flex" }}>
