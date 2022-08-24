@@ -1,6 +1,6 @@
 import React from "react";
 import NavBar from "../../components/NavBar/NavBar";
-
+import Button from "../../components/Button/Button";
 import "./SellsPage.css";
 
 const SellsPage = () => {
@@ -37,7 +37,11 @@ const SellsPage = () => {
           <input type="number" className=" BookInfo" placeholder="Price" />
           <div className="BookName">Quantity </div>
           <input type="number" className=" BookInfo" placeholder="Quantity" />
-          <button className="SellsBtn">Sell</button>
+          <div className="sellsButton">
+          <Button buttonLabel="Sells"/>
+        </div>
+
+            
         </div>
       </div>
     </div>

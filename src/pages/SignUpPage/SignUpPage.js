@@ -17,7 +17,6 @@ const SignUpPage = () => {
   const navigate = useNavigate();
 
   const handleJoin = (event) => {
-    console.log("sanamn");
     event.preventDefault();
     fetch("http://localhost:3030/users/register", {
       method: "POST",
