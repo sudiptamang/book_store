@@ -21,6 +21,7 @@
 .userName{
   font-weight: bold;
   color: rgb(16, 9, 214);
+  cursor: pointer;
 
 }
 .navBarList {
@@ -49,6 +50,7 @@
 
 .dropDown-content {
   position: absolute;
+  margin-left: -100px;
   background-color: #f1f1f1;
   min-width: 300px;
   min-height: 250px;
