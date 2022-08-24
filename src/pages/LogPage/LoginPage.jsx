@@ -5,6 +5,7 @@ import { RiLockPasswordLine } from "react-icons/ri";
 import { Link, useNavigate } from "react-router-dom";
 import "./LoginPage.css";
 import BackBar from "../../components/BackBar/BackBar";
+import Button from "../../components/Button/Button";
 
 const LoginPage = () => {
   const [password, setPassword] = useState();
@@ -83,9 +84,9 @@ const LoginPage = () => {
             </div>
             <p className="message">{ data.message}</p>
 
-            <button className="Loginbutton" onClick={handleLogin}>
-              Login
-            </button>
+            <div onClick={handleLogin}>
+            <Button buttonName={"Login"}/>
+            </div>
             <Link to={"/ResetPassword"}>
               <p className="FOOTER">FORGOT LOGIN PASSWORD?</p>
             </Link>

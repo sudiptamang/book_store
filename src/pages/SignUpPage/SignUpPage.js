@@ -1,16 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./SignUpPage.css";
 import SignUpImg from "../../Assets/BookStoreSignUp.jpg";
-import { HiArrowNarrowLeft } from "react-icons/hi";
 import { BsPersonFill } from "react-icons/bs";
-import { AiFillMobile } from "react-icons/ai";
-import { FaRegCalendarAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { FaLock } from "react-icons/fa";
 import { TbBrandFacebook } from "react-icons/tb";
 import { AiOutlineGooglePlus } from "react-icons/ai";
 import { Link, useNavigate } from "react-router-dom";
 import BackBar from "../../components/BackBar/BackBar";
+import Button from "../../components/Button/Button";
 
 const SignUpPage = () => {
   const [name, setName] = useState();
@@ -19,6 +17,7 @@ const SignUpPage = () => {
   const navigate = useNavigate();
 
   const handleJoin = (event) => {
+    console.log("sanamn");
     event.preventDefault();
     fetch("http://localhost:3030/users/register", {
       method: "POST",
@@ -60,15 +59,7 @@ const SignUpPage = () => {
                 required
               />
             </div>
-            {/* <div className="input">
-              <AiFillMobile />
-              <input
-                type="number"
-                placeholder="Mobile Number"
-                className="inputBox"
-                required
-              />
-            </div> */}
+
             <div className="input">
               <MdEmail />
               <input
@@ -79,24 +70,7 @@ const SignUpPage = () => {
                 required
               />
             </div>
-            {/* <div className="input">
-              <FaRegCalendarAlt />
-              <input type="date" className="inputBox dateIcon" /> */}
-            {/* </div> */}
-            {/* <div className="input radioBtn">
-              <div>
-                <input type="radio" id="male" name="gender" value="male" />
-                <label for="male">Male</label>
-              </div>
-              <div>
-                <input type="radio" id="female" name="gender " value="female" />
-                <label for="female">Female</label>
-              </div>
-              <div>
-                <input type="radio" id="other" name="gender" value="other" />
-                <label for="other">Other</label>
-              </div>
-            </div> */}
+
             <div className="input">
               <FaLock />
               <input
@@ -119,10 +93,8 @@ const SignUpPage = () => {
             <p className="SignUpDefined">
               By sigining up you agree to <a href="#">terms & condations</a>{" "}
             </p>
-            <div className="input personInfos">
-              <button className="personInfo" type="submit" onClick={handleJoin}>
-                Submit
-              </button>
+            <div onClick={handleJoin}>
+              <Button buttonName={"Submit"} />
             </div>
           </form>
           <div className="inputItems1 ">

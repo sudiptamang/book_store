@@ -21,7 +21,7 @@ const Home = () => {
       <Navbar />
       <div className="searchInputCard">
          <input className="searchInput" placeholder="Search here....." />
-          <BsCart size={"35px"} />
+        <BsCart size={"35px"} />
       </div>
 
       <div className="homeContainer">
@@ -34,6 +34,7 @@ const Home = () => {
           {books.map((book) => (
             <Link to={`/bookdetails/${book.id}`}>
               <AboutBooks
+                
                 image={book?.imageUrl}
                 bookName={book?.title}
                 price={book?.description?.price}
