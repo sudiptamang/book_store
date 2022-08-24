@@ -1,19 +1,42 @@
 import React from "react";
-import Navbar from "../../components/NavBar/NavBar";
+import BackBar from "../../components/BackBar/BackBar";
 import "./PinCode.css";
 import { Link } from "react-router-dom";
+import photo from "../../Assets/book.webp";
 const PinCode = () => {
   return (
     <div>
-      <Navbar />
-      <p> Please enter your PIN code</p>
-      <div>
-        <input type="text" className="pincode" />
+      <BackBar />
+      <div className="PinCodeDesign">
+        <div>
+          <h2> Verification Code</h2>
+          <p className="PinVerification">
+            Please type a 6 - digit verification code has been sent to your
+            email.
+          </p>
+          <div>
+            <input type="text" className="pincode" placeholder="code" />
+          </div>
+
+          <Link to={"/Forgotpassword"}>
+            <button className="PinCodeContinue">Continue</button>
+          </Link>
+        </div>
+        <div className="PinCodeHamroKitab">
+          <div className="Ernest">
+            <div>
+              <img src={photo} className="PinCodeBookImage" />
+            </div>
+            <div>
+              <h3 className="Book">HamroKitab</h3>
+            </div>
+          </div>
+          <h3 className="PincodeFriend">
+            There is no friend as loyal as a book.
+          </h3>
+          <p className="Authorname">-ERNEST HEMINGWAY</p>
+        </div>
       </div>
-      <p>Reset</p>
-      <Link to={"/Forgotpassword"}>
-        <button>Submit</button>
-      </Link>
     </div>
   );
 };

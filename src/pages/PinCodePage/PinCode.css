@@ -1,3 +1,49 @@
 .pincode {
-  background-color: whitesmoke;
+  background-color: gainsboro;
+  padding: 5px;
+  border: none;
+  margin-top: 30px;
+}
+.PinVerification {
+  width: 370px;
+  color: grey;
+}
+.PinCodeContinue {
+  background-color: blue;
+  margin-top: 40px;
+  border: none;
+  color: aliceblue;
+  padding: 5px;
+  width: 100px;
+  border-radius: 5px;
+}
+.PinCodeHamroKitab {
+  height: 250px;
+  width: 400px;
+  background-color: gainsboro;
+  margin-top: 10px;
+}
+.PinCodeDesign {
+  display: flex;
+}
+.PinCodeBookImage {
+  height: 50px;
+  width: 50px;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+.Book {
+  margin-left: 20px;
+  padding-bottom: 30px;
+}
+.Ernest {
+  display: flex;
+}
+.PincodeFriend {
+  width: 250px;
+  margin-left: 30px;
+}
+.Authorname {
+  color: gray;
+  margin-left: 80px;
 }
