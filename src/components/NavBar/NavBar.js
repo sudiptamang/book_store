@@ -9,8 +9,12 @@ const Navbar = () => {
   const DropDownMenu = () => {
     setDropDown(!dropDown);
   };
-
   const userDetail = JSON.parse(localStorage.getItem("user"));
+
+  const handleLogout = () => {
+    localStorage.removeItem("user");
+    window.location.reload();
+  };
   return (
     <div>
       <ul
@@ -89,7 +93,7 @@ const Navbar = () => {
                           <h1 className="containerName">Login</h1>
                           <ul className="containers">
                             <li>Switch Account</li>
-                            <li>Log Out</li>
+                            <li onClick={handleLogout}>Log Out</li>
                           </ul>
                         </div>
                       </div>

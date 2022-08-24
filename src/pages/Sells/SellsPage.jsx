@@ -32,7 +32,7 @@ const SellsPage = () => {
       <div className="BookName">Quantity </div> <input type="number" className=" BookInfo" placeholder="Quantity"/>
       </div> 
       </div>
-        <div className="sellButton"><Button buttonName={ "Sell"} /></div>
+        <div className="sellButton"><Button buttonLabel={ "Sell"} /></div>
      </div>
     </div>
   </div>;

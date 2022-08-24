@@ -47,71 +47,73 @@ const SignUpPage = () => {
       <BackBar />
       <div className="container">
         <img src={SignUpImg} alt="" height={"550px"} width={"550px"} />
-        <div>
-          <form className="inputItems">
-            <div className="input">
-              <BsPersonFill />
-              <input
-                onChange={(e) => setName(e.target.value)}
-                type="text"
-                placeholder="Full Name"
-                className="inputBox"
-                required
-              />
-            </div>
+        <div className="inputSection">
+          <div>
+            <form className="inputItems">
+              <div className="input">
+                <BsPersonFill />
+                <input
+                  onChange={(e) => setName(e.target.value)}
+                  type="text"
+                  placeholder="Full Name"
+                  className="inputBox"
+                  required
+                />
+              </div>
 
-            <div className="input">
-              <MdEmail />
-              <input
-                onChange={(e) => setEmail(e.target.value)}
-                type="email"
-                placeholder="Email"
-                className="inputBox"
-                required
-              />
-            </div>
+              <div className="input">
+                <MdEmail />
+                <input
+                  onChange={(e) => setEmail(e.target.value)}
+                  type="email"
+                  placeholder="Email"
+                  className="inputBox"
+                  required
+                />
+              </div>
 
-            <div className="input">
-              <FaLock />
-              <input
-                onChange={(e) => setPassword(e.target.value)}
-                type="password"
-                placeholder="New Password"
-                required
-                className="inputBox"
-              />
-            </div>
-            <div className="input">
-              <FaLock />
-              <input
-                type="password"
-                placeholder="Confirm Password"
-                required
-                className="inputBox"
-              />
-            </div>
-            <p className="SignUpDefined">
-              By sigining up you agree to <a href="#">terms & condations</a>{" "}
-            </p>
-            <div onClick={handleJoin}>
-              <Button buttonName={"Submit"} />
-            </div>
-          </form>
-          <div className="inputItems1 ">
-            <div className="input SignUpWiths">
-              <button className="SignUpWith SignUpWithFb">
-                <TbBrandFacebook className="Icon" />
-                <span className="icon">Facebook</span>
-              </button>
+              <div className="input">
+                <FaLock />
+                <input
+                  onChange={(e) => setPassword(e.target.value)}
+                  type="password"
+                  placeholder="New Password"
+                  required
+                  className="inputBox"
+                />
+              </div>
+              <div className="input">
+                <FaLock />
+                <input
+                  type="password"
+                  placeholder="Confirm Password"
+                  required
+                  className="inputBox"
+                />
+              </div>
+              <p className="SignUpDefined">
+                By sigining up you agree to <a href="#">terms & condations</a>{" "}
+              </p>
+              <div onClick={handleJoin}>
+                <Button buttonLabel={"Submit"} />
+              </div>
+            </form>
+            <div className="inputItems1 ">
+              <div className="input SignUpWiths">
+                <button className="SignUpWith SignUpWithFb">
+                  <TbBrandFacebook className="Icon" />
+                  <span className="icon">Facebook</span>
+                </button>
 
-              <button className="SignUpWith SignUpWithGgl">
-                <AiOutlineGooglePlus className="Icon" />
-                <span className="icon">Google</span>
-              </button>
+                <button className="SignUpWith SignUpWithGgl">
+                  <AiOutlineGooglePlus className="Icon" />
+                  <span className="icon">Google</span>
+                </button>
+              </div>
+              <p>
+                Already Members? <Link to={"/logpage"}>Login here</Link>
+              </p>
             </div>
-            <p>
-              Already Members? <Link to={"/logpage"}>Login here</Link>
-            </p>
           </div>
         </div>
       </div>

@@ -85,7 +85,7 @@ const LoginPage = () => {
             <p className="message">{ data.message}</p>
 
             <div onClick={handleLogin}>
-            <Button buttonName={"Login"}/>
+            <Button buttonLabel={"Login"}/>
             </div>
             <Link to={"/ResetPassword"}>
               <p className="FOOTER">FORGOT LOGIN PASSWORD?</p>
