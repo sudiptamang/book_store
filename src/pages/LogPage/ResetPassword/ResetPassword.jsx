@@ -1,8 +1,43 @@
-import React from "react";
-import BackBar from "../../../components/BackBar/BackBar";
+import React, { useState } from "react";
 import "./ResetPassword.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import BackBar from "../../../components/BackBar/BackBar";
+import { AiFillAlert } from "react-icons/ai";
+
 const ResetPassword = () => {
+  const [email, setEmail] = useState();
+  const [message, setMessage] = useState("");
+  const [reqEmail, setReqEmail] = useState("");
+  const navigate = useNavigate();
+
+  const handleJoin = (event) => {
+    event.preventDefault();
+    fetch("http://localhost:3030/user/password/forgot", {
+      method: "POST",
+      body: JSON.stringify({
+        email: email,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.success) {
+          navigate("/PinCodePage");
+          console.log("success", data.success);
+        } else if (email == "" || email == undefined) {
+          setReqEmail("Please, Enter your email.", data.reqEmail);
+        } else {
+          setMessage(data.message);
+          console.log(data);
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   return (
     <div>
       <BackBar />
@@ -16,12 +51,17 @@ const ResetPassword = () => {
           type="email"
           placeholder="Enter your Email...."
           required
+          onChange={(e) => setEmail(e.target.value)}
         />
-        <Link to={"/PinCodePage"}>
-          <div>
-            <button className="verify">Continue</button>
-          </div>
-        </Link>
+        <p className="message">
+          {reqEmail} {message}
+        </p>
+        {/* <p className="message">{message}</p> */}
+        <div>
+          <button className="verify" onClick={handleJoin}>
+            Continue
+          </button>
+        </div>
       </div>
     </div>
   );
