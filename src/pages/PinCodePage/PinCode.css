@@ -25,8 +25,8 @@
 }
 .PinCodeDesign {
   display: flex;
-  justify-content: center;
-  margin-top: 20px;
+  width: 775px;
+  margin: 100px auto 0 auto;
 }
 .PinCodeBookImage {
   height: 50px;
