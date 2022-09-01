@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../../components/NavBar/NavBar";
 import { Link } from "react-router-dom";
-
-import "./BookDetail.css";
 import { useParams } from "react-router-dom";
+import "./BookDetail.css";
 
 function Book() {
   const [bookDetails, setBookDetails] = useState([]);

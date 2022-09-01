@@ -25,12 +25,10 @@ const ResetPassword = () => {
       .then((data) => {
         if (data.success) {
           navigate("/PinCodePage");
-          console.log("success", data.success);
         } else if (email == "" || email == undefined) {
-          setReqEmail("Please, Enter your email.", data.reqEmail);
+          setReqEmail("Please, Enter your email.");
         } else {
-          setMessage(data.message);
-          console.log(data);
+          setMessage(data);
         }
       })
       .catch((err) => {
@@ -52,11 +50,13 @@ const ResetPassword = () => {
           placeholder="Enter your Email...."
           required
           onChange={(e) => setEmail(e.target.value)}
-        />
-        <p className="message">
-          {reqEmail} {message}
-        </p>
-        {/* <p className="message">{message}</p> */}
+        />{
+          message.success === false ?( <p className="message">{message.message}</p> ):(<p className="message">
+          { reqEmail } 
+      </p>)
+        }
+        
+         
         <div>
           <button className="verify" onClick={handleJoin}>
             Continue
