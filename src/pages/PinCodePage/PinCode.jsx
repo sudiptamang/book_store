@@ -17,10 +17,10 @@ const PinCode = () => {
           <div>
             <input type="text" className="pincode" placeholder="code" />
           </div>
-
-          <Link to={"/Forgotpassword"}>
-            <button className="PinCodeContinue">Continue</button>
-          </Link>
+          {/* 
+          <Link to={"/Forgotpassword"}> */}
+          <button className="PinCodeContinue">Continue</button>
+          {/* </Link> */}
         </div>
         <div className="PinCodeHamroKitab">
           <div className="Ernest">

@@ -29,3 +29,10 @@
   border: none;
   color: aliceblue;
 }
+.CartHeaderPage {
+  justify-content: center;
+  display: flex;
+}
+.Summary {
+  margin-left: 30px;
+}

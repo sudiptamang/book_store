@@ -10,9 +10,8 @@ import Button from "../../components/Button/Button";
 const LoginPage = () => {
   const [password, setPassword] = useState();
   const [email, setEmail] = useState();
-  const [data, setData] = useState([])
+  const [data, setData] = useState([]);
   const navigate = useNavigate();
- 
 
   const handleLogin = (event) => {
     event.preventDefault();
@@ -40,7 +39,7 @@ const LoginPage = () => {
           );
           navigate("/");
         } else {
-          setData(data)
+          setData(data);
           console.log("data", data);
         }
       })
@@ -82,12 +81,12 @@ const LoginPage = () => {
                 type="password"
               />
             </div>
-            <p className="message">{ data.message}</p>
+            <p className="message">{data.message}</p>
 
             <div onClick={handleLogin}>
-            <Button buttonLabel={"Login"}/>
+              <Button buttonLabel={"Login"} />
             </div>
-            <Link to={"/ResetPassword"}>
+            <Link to={"/ForgotPassword"}>
               <p className="FOOTER">FORGOT LOGIN PASSWORD?</p>
             </Link>
           </div>

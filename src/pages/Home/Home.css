@@ -4,9 +4,7 @@
   outline: none;
   border: none;
   padding: 8px 300px 8px 10px;
-  margin-right:10px;
-
-  
+  margin-right: 10px;
 }
 
 .topSales {
@@ -27,8 +25,6 @@
   justify-content: center;
   align-items: center;
   margin: 50px 0px;
-
-
 }
 .homeContainer {
   display: flex;
@@ -43,5 +39,3 @@
   flex-wrap: wrap;
   width: 100%;
 }
-
-
