@@ -1,34 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import BackBar from "../../../components/BackBar/BackBar";
 import "./ResetPassword.css";
-import { Link } from "react-router-dom";
-const ResetPassword = () => {
-  const [email, setEmail] = useState();
-  const [message, setMessage] = useState("");
-  const [reqEmail, setReqEmail] = useState("");
-  const navigate = useNavigate();
+import { useNavigate } from "react-router-dom";
 
-  const handleJoin = (event) => {
+const ResetPassword = () => {
+  const [password, setPassword] = useState();
+  const navigate = useNavigate();
+  console.log("happy");
+
+  const handleReset = (event) => {
     event.preventDefault();
     fetch("http://localhost:3030/user/password/forgot", {
       method: "POST",
       body: JSON.stringify({
-        email: email,
+        password: password,
       }),
       headers: {
         "Content-Type": "application/json",
       },
     })
       .then((response) => response.json())
-      .then((data) => {
-        if (data.success) {
-          navigate("/PinCodePage");
-        } else if (email == "" || email == undefined) {
-          setReqEmail("Please, Enter your email.");
-        } else {
-          setMessage(data);
-        }
-      })
+      .then((data) => {})
       .catch((err) => {
         console.log(err);
       });
@@ -37,22 +29,36 @@ const ResetPassword = () => {
   return (
     <div>
       <BackBar />
-      <h1 className="ForgotPassword">FORGOT LOGIN PASSWORD?</h1>
-      <div className="resetpassword">
-        <h3 className="ForgotEmail">
-          Please enter the Email that you want to reset the password.
-        </h3>
-        <input
-          className="ForgotInput"
-          type="email"
-          placeholder="Enter your Email...."
-          required
-        />
-        <Link to={"/PinCodePage"}>
-          <div>
-            <button className="verify">Continue</button>
-          </div>
-        </Link>
+      <div className="containerNewPassword">
+        <h1 className="NamePassword">Create a new password</h1>
+        <p className="contain">
+          Your new password must be different from previous used password.
+        </p>
+        <div className="newPassword">
+          <div>New Password</div>
+          <input
+            type="password"
+            placeholder="New Password"
+            required
+            className="inputNewPassword"
+          />
+          <div>Must be at least 8 character</div>
+        </div>
+        <br />
+        <div className="newPassword">
+          <div>Confirm New Password</div>
+          <input
+            type="password"
+            placeholder="New Password"
+            required
+            className="inputNewPassword"
+          />
+          <div>Both Password must be match.</div>
+        </div>
+        <br />
+        <button onClick={handleReset} className="newPasswordBtn">
+          Reset Password
+        </button>
       </div>
     </div>
   );

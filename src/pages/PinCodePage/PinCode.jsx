@@ -23,7 +23,7 @@ const PinCode = () => {
       .then((response) => response.json())
       .then((data) => {
         if (data.success) {
-          navigate("/ForgotPassword");
+          navigate("/ResetPassword");
           console.log("success", data.success);
         } else if (PinCode == "" || PinCode == undefined) {
           setReqPinCode("Enter a code", data.reqPinCode);
